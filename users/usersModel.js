@@ -4,8 +4,18 @@ function getAll() {
   return db("users");
 }
 
-function addUser(user) {
-  return db("users").insert(user);
+function findBy(where) {
+  return db("users").where(where);
 }
 
-module.exports = { getAll, addUser };
+function findByUsername(username) {
+  return findBy({ username }).first();
+}
+
+function addUser(user) {
+  return db("users")
+    .insert(user, "id")
+    .then(([id]) => id);
+}
+
+module.exports = { getAll, addUser, findBy, findByUsername };
