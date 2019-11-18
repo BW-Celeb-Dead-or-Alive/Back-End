@@ -35,11 +35,7 @@ module.exports = {
     client: "postgresql",
     connection: process.env.DATABASE_URL,
     useNullAsDefault: true,
-    pool: {
-      afterCreate: (conn, done) => {
-        conn.run("PRAGMA foreign_keys = ON", done);
-      }
-    },
+
     migrations: {
       directory: "./data/migrations",
       tableName: "knex_migrations"
