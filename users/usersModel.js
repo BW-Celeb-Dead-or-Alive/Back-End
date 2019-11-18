@@ -18,4 +18,10 @@ function addUser(user) {
     .then(([id]) => id);
 }
 
-module.exports = { getAll, addUser, findBy, findByUsername };
+function addScores(updated, id) {
+  return db("users")
+    .where({ id })
+    .update(updated);
+}
+
+module.exports = { getAll, findBy, findByUsername, addUser, addScores };

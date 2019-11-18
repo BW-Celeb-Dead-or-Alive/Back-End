@@ -4,14 +4,12 @@ const cors = require("cors");
 const helmet = require("helmet");
 const server = express();
 const usersRouter = require("./users/usersRouter");
-const scoresRouter = require("./scores/scoresRouter");
 const celebsRouter = require("./celebs/celebsRouter");
 
 server.use(helmet());
 server.use(express.json());
 server.use(cors());
 server.use("/api/users", usersRouter);
-server.use("/api/scores", scoresRouter);
 server.use("/api/celebs", celebsRouter);
 
 server.get("/", (req, res) => {
