@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
 module.exports = (req, res, next) => {
   const token = req.headers.authorization;
@@ -11,7 +12,10 @@ module.exports = (req, res, next) => {
         if (err) {
           res.status(401).json({ message: "Token invalid" });
         } else {
-          req.user = decodedToken;
+          req.user = {
+            username: decodedToken.username,
+            score: decodedToken.score
+          };
           next();
         }
       }

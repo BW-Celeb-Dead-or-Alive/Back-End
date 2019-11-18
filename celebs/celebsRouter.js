@@ -1,2 +1,30 @@
 const router = require("express").Router();
+const Users = require("../auth/auth-model.js");
+const Celebs = require("./celeb-model.js");
+
+router.get("/", (req, res) => {
+  Celebs.find()
+    .then(results => {
+      res.json(results);
+    })
+    .catch(err => {
+      res.status(500).json({ message: "unable to get celeb data" });
+    });
+});
+
+router.get("/:id", (req, res) => {
+  const { id } = req.params;
+  Celebs.findById(id)
+    .then(results => {
+      if (results) {
+        res.json(results);
+      } else {
+        res.status(404).json({ message: "could not get celeb with that id" });
+      }
+    })
+    .catch(err => {
+      res.status(500).json({ message: "unable to get celebs" });
+    });
+});
+
 module.exports = router;
