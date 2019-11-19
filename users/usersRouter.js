@@ -47,7 +47,7 @@ router.put("/:id", (req, res) => {
   console.log(req.body);
   const { id } = req.params;
 
-  if (updated.score) {
+  if (updated.scores) {
     Users.addScores(updated, id)
       .then(() => {
         res.status(200).json(updated);
