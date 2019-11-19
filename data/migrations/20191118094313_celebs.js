@@ -7,7 +7,7 @@ exports.up = function(knex) {
       .notNullable()
       .unique();
 
-    celebs.string("imageurl", 255).notNullable();
+    celebs.string("imageurl").notNullable();
 
     celebs
       .boolean("dead")
