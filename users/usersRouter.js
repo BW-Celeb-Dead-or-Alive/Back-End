@@ -62,7 +62,7 @@ router.put("/:id", (req, res) => {
 
 //---------------------------------------DELETE USER---------------------------------------//
 
-router.delete("/users/:id", (req, res) => {
+router.delete("/:id", (req, res) => {
   const { id } = req.params;
   Users.remove(id)
     .then(deleted => {
