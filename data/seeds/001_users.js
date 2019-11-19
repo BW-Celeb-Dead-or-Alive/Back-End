@@ -11,19 +11,19 @@ exports.seed = function(knex) {
           id: 1,
           username: "Forrest",
           password: bcrypt.hashSync("123"),
-          scores: "7 / 10"
+          scores: 7
         },
         {
           id: 2,
           username: "Raj",
           password: bcrypt.hashSync("123"),
-          scores: "9 / 10"
+          scores: 9
         },
         {
           id: 3,
           username: "David",
           password: bcrypt.hashSync("123"),
-          scores: "10 / 10"
+          scores: 10
         }
       ]);
     });

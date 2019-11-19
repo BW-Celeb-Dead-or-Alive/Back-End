@@ -3,6 +3,8 @@ const Users = require("./usersModel");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 
+//---------------------------------------GENERATE TOKEN---------------------------------------//
+
 function generateToken(user) {
   const payload = {
     username: user.name,
@@ -14,6 +16,8 @@ function generateToken(user) {
   return jwt.sign(payload, process.env.JWT_SECRET || "PRIVATE", options);
 }
 
+//---------------------------------------GET ALL USERS---------------------------------------//
+
 router.get("/", (req, res) => {
   Users.getAll()
     .then(response => {
@@ -22,13 +26,7 @@ router.get("/", (req, res) => {
     .catch(err => res.status(500).json({ error: err }));
 });
 
-// router.post("/", (req, res) => {
-//   Users.addUser(req.body)
-//     .then(addedUser => {
-//       res.status(201).json(addedUser);
-//     })
-//     .catch(err => res.status(500).json({ error: err }));
-// });
+//---------------------------------------REGISTER---------------------------------------//
 
 router.post("/register", (req, res) => {
   const { username, password } = req.body;
@@ -41,6 +39,8 @@ router.post("/register", (req, res) => {
       res.status(500).json({ message: "Error registering user" });
     });
 });
+
+//---------------------------------------IMPLEMENT SCORE---------------------------------------//
 
 router.put("/:id", (req, res) => {
   const updated = req.body;
@@ -59,6 +59,25 @@ router.put("/:id", (req, res) => {
     res.status(400).json({ error: "there has been no changes to the score" });
   }
 });
+
+//---------------------------------------DELETE USER---------------------------------------//
+
+router.delete("/users/:id", (req, res) => {
+  const { id } = req.params;
+  Users.remove(id)
+    .then(deleted => {
+      if (deleted) {
+        res.json({ removed: deleted });
+      } else {
+        res.status(404).json({ error: "user with that id does not exist" });
+      }
+    })
+    .catch(err => {
+      res.status(500).json({ message: "unable to delete user" });
+    });
+});
+
+//---------------------------------------LOGIN---------------------------------------//
 
 router.post("/login", (req, res) => {
   const { username, password } = req.body;

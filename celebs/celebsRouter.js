@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const Celebs = require("./celebsModel");
 
+//---------------------------------------GET ALL CELEBRITIES---------------------------------------//
+
 router.get("/", (req, res) => {
   Celebs.find()
     .then(results => {
@@ -10,6 +12,8 @@ router.get("/", (req, res) => {
       res.status(500).json({ message: "unable to get celeb data" });
     });
 });
+
+//---------------------------------------GET CELEBRITY BY ID---------------------------------------//
 
 router.get("/:id", (req, res) => {
   const { id } = req.params;

@@ -24,4 +24,9 @@ function addScores(updated, id) {
     .update(updated);
 }
 
-module.exports = { getAll, findBy, findByUsername, addUser, addScores };
+function remove(id) {
+  return db("users")
+    .where({ id })
+    .del();
+}
+module.exports = { getAll, findBy, findByUsername, addUser, addScores, remove };
