@@ -3,7 +3,7 @@ exports.up = function(knex) {
     celebs.increments();
 
     celebs
-      .string("name", 255)
+      .string("name")
       .notNullable()
       .unique();
 
