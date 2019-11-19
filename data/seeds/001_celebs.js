@@ -8,61 +8,61 @@ exports.seed = function(knex) {
         {
           name: "Jack Nicholson",
           imageurl:
-            "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwi4pYrT8fblAhXvJzQIHZ_pBAAQjB16BAgBEAM&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AJack_Nicholson_2001.jpg&psig=AOvVaw0ZfrM08w3uB-23TObfp_Hf&ust=1574273927347181",
+            "https://upload.wikimedia.org/wikipedia/commons/e/ec/Jack_Nicholson_2001.jpg",
           dead: false
         },
         {
           name: "Angelina Jolie",
           imageurl:
-            "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiXsIjZ8fblAhUdHjQIHRaLAmMQjB16BAgBEAM&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AAngelina_Jolie_2_June_2014_(cropped).jpg&psig=AOvVaw2Usm5kDZWu41WBo_CkXrbR&ust=1574273967937917",
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Angelina_Jolie_2_June_2014_%28cropped%29.jpg/422px-Angelina_Jolie_2_June_2014_%28cropped%29.jpg",
           dead: false
         },
         {
           name: "John Lennon",
           imageurl:
-            "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwim6dDe8fblAhU-JTQIHdG5C6kQjB16BAgBEAM&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AJohn_Lennon_1969_(cropped).jpg&psig=AOvVaw0PyX-zHQY4lwan1Sh9A6-I&ust=1574273982133522",
+            "https://upload.wikimedia.org/wikipedia/commons/8/85/John_Lennon_1969_%28cropped%29.jpg",
           dead: true
         },
         {
           name: "Whitney Houston",
           imageurl:
-            "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiOjpiG8vblAhUHJDQIHfWrDuwQjB16BAgBEAM&url=https%3A%2F%2Fsw.wikipedia.org%2Fwiki%2FPicha%3AWhitney_Houston_Welcome_Home_Heroes_1_cropped.jpg&psig=AOvVaw28exJPHwRsmoV9WzGLSixd&ust=1574274021074826",
+            "https://upload.wikimedia.org/wikipedia/commons/a/a7/Whitney_Houston_Welcome_Home_Heroes_1_cropped.jpg",
           dead: true
         },
         {
           name: "Al Pacino",
           imageurl:
-            "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjavIia8vblAhXgHjQIHS6VAMIQjB16BAgBEAM&url=https%3A%2F%2Fsk.m.wikipedia.org%2Fwiki%2FS%25C3%25BAbor%3AAl_Pacino.jpg&psig=AOvVaw2hshy5kPx3oXPFajM5SeZx&ust=1574274093704042",
+            "https://upload.wikimedia.org/wikipedia/commons/9/98/Al_Pacino.jpg",
           dead: false
         },
         {
           name: "Carrie Fisher",
           imageurl:
-            "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjBt6qy8vblAhWRoFsKHe_PCEkQjB16BAgBEAM&url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fjimivr%2F2103448605&psig=AOvVaw1AL_5bwQlEZIxq3Wy3DEqp&ust=1574274137905593",
+            "https://live.staticflickr.com/2036/2103448605_529af5337a.jpg",
           dead: true
         },
         {
           name: "Christopher Lloyd",
           imageurl:
-            "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjI0fjZ8vblAhWuKDQIHQ7sAcMQjB16BAgBEAM&url=https%3A%2F%2Fde.wikipedia.org%2Fwiki%2FDatei%3AChristopher_Lloyd_May_2015.jpg&psig=AOvVaw2bo4ACht4mToij8v-3IeEF&ust=1574274199663503",
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Christopher_Lloyd_May_2015.jpg/706px-Christopher_Lloyd_May_2015.jpg",
           dead: false
         },
         {
           name: "Bruce Lee",
           imageurl:
-            "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiIlaWB8_blAhU8IjQIHWu2AeQQjB16BAgBEAM&url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Flex%2F43855760&psig=AOvVaw0uP0c1PM9N1QguwUwYd4qx&ust=1574274272656066",
+            "https://live.staticflickr.com/27/43855760_fa16727836_z.jpg",
           dead: true
         },
         {
           name: "Heath Ledger",
           imageurl:
-            "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjXp6yR8_blAhWdJTQIHdobAUoQjB16BAgBEAM&url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2F22284790%40N06%2F2149692029&psig=AOvVaw0uyx7k6TkR100WwSb5coYS&ust=1574274355172808",
+            "https://live.staticflickr.com/2296/2149692029_e506cce623_z.jpg",
           dead: true
         },
         {
           name: "John Travolta",
           imageurl:
-            "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwioluuv8_blAhVtGDQIHYFXAVIQjB16BAgBEAM&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AJohn_Travolta_Deauville_2013.jpg&psig=AOvVaw3UZKdB9QnSs9cTsVtQRCGO&ust=1574274391235724",
+            "https://upload.wikimedia.org/wikipedia/commons/0/00/John_Travolta_Deauville_2013.jpg",
           dead: false
         }
       ]);
