@@ -2,6 +2,7 @@ const router = require("express").Router();
 const Users = require("./usersModel");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
+const restrict = require("./restrict.js");
 
 //---------------------------------------GENERATE TOKEN---------------------------------------//
 
@@ -18,7 +19,7 @@ function generateToken(user) {
 
 //---------------------------------------GET ALL USERS---------------------------------------//
 
-router.get("/", (req, res) => {
+router.get("/", restrict, (req, res) => {
   Users.getAll()
     .then(response => {
       res.status(200).json(response);
@@ -28,7 +29,7 @@ router.get("/", (req, res) => {
 
 //---------------------------------------REGISTER---------------------------------------//
 
-router.post("/register", (req, res) => {
+router.post("/register", restrict, (req, res) => {
   const { username, password } = req.body;
   Users.addUser({ username, password: bcrypt.hashSync(password, 8) })
     .then(id => {
