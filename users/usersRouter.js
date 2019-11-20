@@ -29,7 +29,7 @@ router.get("/", restrict, (req, res) => {
 
 //---------------------------------------REGISTER---------------------------------------//
 
-router.post("/register", restrict, (req, res) => {
+router.post("/register", (req, res) => {
   const { username, password } = req.body;
   Users.addUser({ username, password: bcrypt.hashSync(password, 8) })
     .then(id => {
